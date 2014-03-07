@@ -9,7 +9,9 @@ body {
   border: 0;
   outline: 0;
   vertical-align: baseline;
-  background: transparent; }
+  background: transparent;
+  font-family: "helvetica Neue", "Helvetica", sans-serif;
+  font-weight: 200; }
 
 header {
   background-color: #298ec3;
@@ -20,7 +22,6 @@ header {
     font-weight: normal;
     line-height: 1.618em;
     display: inline;
-    font-family: "helvetica Neue", "Helvetica", sans-serif;
     font-weight: 100; }
 
 .sixth {
@@ -95,3 +96,8 @@ header {
       margin-bottom: 5px;
       border-radius: 5px;
       border: 1px solid #999; }
+
+.date {
+  font-size: 0.8em;
+  color: gray;
+  margin-top: 5px; }
