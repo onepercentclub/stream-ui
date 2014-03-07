@@ -3,6 +3,26 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  vertical-align: baseline;
+  background: transparent; }
+
+header {
+  background-color: #298ec3;
+  padding: 0.5em 1em;
+  text-align: center; }
+  header h1 {
+    color: #fff;
+    font-weight: normal;
+    line-height: 1.618em;
+    display: inline;
+    font-family: "helvetica Neue", "Helvetica", sans-serif;
+    font-weight: 100; }
+
 .sixth {
   *zoom: 1;
   max-width: 68em;
