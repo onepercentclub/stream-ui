@@ -1,4 +1,8 @@
 Template.messages.events({
+  'click #load-more': function (event, template) {
+    Session.set('limit', Session.get('limit') + App.defaults.skip);
+  },
+
   'click .save': function (event, template) {
     var text = $(template.find(".text textarea"))
 
@@ -14,14 +18,17 @@ Template.messages.events({
     		text.val("");
     	}
     });
-    
-
   }
 });
 
 Template.messages.helpers({
   messages: function () {
     return Messages.find({}, {sort: {created: -1}});
+  },
+  hideLoadMore: function () {
+    var status = Session.get("hideLoadMore");
+
+    return _.isUndefined(status) ? false : status;
   }
 });
 

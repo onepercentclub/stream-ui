@@ -35,6 +35,30 @@ header {
   .sixth:after {
     clear: both; }
 
+#load-more {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
+  padding: 10px; }
+  #load-more:last-child {
+    margin-right: 0; }
+  @media screen and (max-width: 700px) {
+    #load-more {
+      float: left;
+      display: block;
+      margin-right: 4.82916%;
+      width: 100%; }
+      #load-more:last-child {
+        margin-right: 0; } }
+  #load-more .inner {
+    padding: 10px;
+    color: white;
+    background-color: #298ec3;
+    border-radius: 5px;
+    text-align: center;
+    border: 1px solid #999; }
+
 #message {
   float: left;
   display: block;

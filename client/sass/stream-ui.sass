@@ -1,6 +1,7 @@
 @import "bourbon/bourbon";
 @import "neat/neat";
 
+$primary-color: #298ec3;
 $mobile: new-breakpoint(max-width 700px 6);
 $standard-padding: 10px;
 
@@ -16,7 +17,7 @@ body {
 }
 
 header {
-	background-color: #298ec3;
+	background-color: $primary-color;
 	padding: 0.5em 1em;
 	text-align: center;
 
@@ -31,6 +32,25 @@ header {
 
 .sixth {
 	@include outer-container;
+}
+
+#load-more {
+	@include span-columns(12);
+	@include pad($standard-padding);
+
+	@include media($mobile) {
+  		@include span-columns(6);
+	}
+
+	.inner {
+		@include pad($standard-padding);
+
+		color: white;
+		background-color: $primary-color;
+		border-radius: $standard-padding/2;
+		text-align: center;
+		border: 1px solid #999;
+	}
 }
 
 #message {
