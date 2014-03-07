@@ -35,21 +35,21 @@ header {
   .sixth:after {
     clear: both; }
 
-#comment {
+#message {
   float: left;
   display: block;
   margin-right: 2.35765%;
   width: 31.76157%;
   padding: 10px; }
-  #comment:last-child {
+  #message:last-child {
     margin-right: 0; }
   @media screen and (max-width: 700px) {
-    #comment {
+    #message {
       float: left;
       display: block;
       margin-right: 4.82916%;
       width: 204.82916%; }
-      #comment:last-child {
+      #message:last-child {
         margin-right: 0; } }
 
 #list {
