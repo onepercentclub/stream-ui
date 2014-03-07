@@ -4,10 +4,22 @@ Template.home.greeting = function () {
 
 Template.home.events({
   'click .save': function (event, template) {
-    var text = $(template.find(".text textarea")).val(),
-        created = Date.now();
+    var text = $(template.find(".text textarea"))
 
-    Messages.insert({text: text, created: created});
+    var message = {
+    	text: text.val(),
+    	created: Date.now()
+    };
+
+    Meteor.call("messageInsert", message, function(error, messageId){
+    	if (error) {
+    		console.log("Error:", error);
+    	} else {
+    		text.val("");
+    	}
+    });
+    
+
   }
 });
 
@@ -16,3 +28,4 @@ Template.home.helpers({
     return Messages.find({}, {sort: {created: -1}});
   }
 });
+
