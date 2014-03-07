@@ -1,0 +1,7 @@
+{
+  "meteor": {
+    "git": "https://github.com/meteor/meteor.git",
+  	"commit": "73931f399f9d9d6f31d13590c9a77d98cf4d7cfd"
+  },
+  "packages": {}
+}
