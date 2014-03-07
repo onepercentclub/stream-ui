@@ -2,5 +2,5 @@
 Meteor.publish("messages", function (limit) {
   check(limit, Number);
 
-  return Messages.find({}, {limit: limit});
+  return Messages.find({}, {limit: limit, sort: {created: -1}});
 });
