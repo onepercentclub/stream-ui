@@ -38,15 +38,16 @@ header {
   float: left;
   display: block;
   margin-right: 2.35765%;
-  width: 31.76157%; }
+  width: 31.76157%;
+  padding: 10px; }
   #comment:last-child {
     margin-right: 0; }
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 700px) {
     #comment {
       float: left;
       display: block;
       margin-right: 4.82916%;
-      width: 47.58542%; }
+      width: 204.82916%; }
       #comment:last-child {
         margin-right: 0; } }
 
@@ -54,17 +55,43 @@ header {
   float: left;
   display: block;
   margin-right: 2.35765%;
-  width: 65.88078%; }
+  width: 65.88078%;
+  padding: 10px; }
   #list:last-child {
     margin-right: 0; }
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 700px) {
     #list {
       float: left;
       display: block;
       margin-right: 4.82916%;
-      width: 47.58542%; }
+      width: 204.82916%; }
       #list:last-child {
         margin-right: 0; } }
-
-form.message-form {
-  background-color: red; }
+  #list .box {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 48.82117%; }
+    #list .box:last-child {
+      margin-right: 0; }
+    #list .box:nth-child(2n) {
+      margin-right: 0; }
+    #list .box:nth-child(2n+1) {
+      clear: left; }
+    @media screen and (max-width: 700px) {
+      #list .box {
+        float: left;
+        display: block;
+        margin-right: 4.82916%;
+        width: 47.58542%; }
+        #list .box:last-child {
+          margin-right: 0; }
+        #list .box:nth-child(1n) {
+          margin-right: 0; }
+        #list .box:nth-child(1n+1) {
+          clear: left; } }
+    #list .box .inner {
+      padding: 10px;
+      margin-bottom: 5px;
+      border-radius: 5px;
+      border: 1px solid #999; }

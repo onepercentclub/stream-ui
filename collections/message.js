@@ -19,7 +19,7 @@ Meteor.methods({
 	messageInsert: function(message){
 		check(message, Object);
 		check(message.text, String);
-		check(message.created, Object);
+		check(message.created, Number);
 
 		var messageId = Messages.insert(message);
 		return messageId;

@@ -1,7 +1,8 @@
 @import "bourbon/bourbon";
 @import "neat/neat";
 
-$mobile: new-breakpoint(max-width 500px 6);
+$mobile: new-breakpoint(max-width 700px 6);
+$standard-padding: 10px;
 
 body {
 	margin: 0;
@@ -33,20 +34,40 @@ header {
 
 #comment {
 	@include span-columns(4);
+	@include pad($standard-padding);
 
 	@include media($mobile) {
-  		@include span-columns(3);
+  		@include span-columns(12);
 	}
 }
 
 #list {
 	@include span-columns(8);
+	@include pad($standard-padding);
 
 	@include media($mobile) {
-  		@include span-columns(3);
+  		@include span-columns(12);
+	}
+
+	.box {
+		@include span-columns(6);
+		@include omega(2n);
+
+		@include media($mobile) {
+  			@include span-columns(3);
+  			@include omega(1n);
+		}
+
+		.inner {
+			@include pad($standard-padding);
+
+			margin-bottom: $standard-padding/2;
+			border-radius: $standard-padding/2;
+			border: 1px solid #999;			
+		}
 	}
 }
 
 form.message-form {
-	background-color: red;
+	// background-color: red;
 }
