@@ -7,33 +7,34 @@
 </body>
 
 <template name="home">
-  <h1>Hello World!</h1>
+  <header>
+    <h1>Hello World!</h1>
+  </header>
 
-  <form class="message-form">
-    <div class="text">
-      <div class="label">Message</div>
-      <textarea cols="30" rows="5"></textarea>
+  <section class="sixth">
+    <pre>@include outer-container;
+    $mobile: new-breakpoint(max-width 500px 6);
+    </pre>
+    <div id="comment">
+      <form class="message-form">
+        <div class="text">
+          <div class="label">Message</div>
+          <textarea cols="30" rows="5"></textarea>
+        </div>
+      </form>
+      <a class="save" href="#">Save</a>
     </div>
-<!--     <div class="tags">
-      <div class="label">Tags</div>
-      <input type="text" />
+    <div id="list">
+      {{#if messages}}
+        <ul>
+          {{#each messages}}
+            <li>{{text}}</li>
+          {{/each}}
+        </ul>
+      {{else}}
+        <p class="notice">No Messages!</p>
+      {{/if}}
     </div>
- -->  </form>
-
-  <a class="save" href="#">Save</a>
-
-  <hr />
-
-  <div class="message"> 
-    {{#if messages}}
-      <ul>
-        {{#each messages}}
-          <li>{{text}}</li>
-        {{/each}}
-      </ul>
-    {{else}}
-      <p class="notice">No Messages!</p>
-    {{/if}}
-  </div>
+  </section>
 
 </template>

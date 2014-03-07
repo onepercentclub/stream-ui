@@ -2,3 +2,49 @@
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
+
+.sixth {
+  *zoom: 1;
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto; }
+  .sixth:before, .sixth:after {
+    content: " ";
+    display: table; }
+  .sixth:after {
+    clear: both; }
+
+#comment {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 31.76157%; }
+  #comment:last-child {
+    margin-right: 0; }
+  @media screen and (max-width: 500px) {
+    #comment {
+      float: left;
+      display: block;
+      margin-right: 4.82916%;
+      width: 47.58542%; }
+      #comment:last-child {
+        margin-right: 0; } }
+
+#list {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 65.88078%; }
+  #list:last-child {
+    margin-right: 0; }
+  @media screen and (max-width: 500px) {
+    #list {
+      float: left;
+      display: block;
+      margin-right: 4.82916%;
+      width: 47.58542%; }
+      #list:last-child {
+        margin-right: 0; } }
+
+form.message-form {
+  background-color: red; }

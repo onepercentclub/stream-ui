@@ -1,2 +1,28 @@
-@import "bourbon/bourbon"
-@import "neat/neat"
+@import "bourbon/bourbon";
+@import "neat/neat";
+
+$mobile: new-breakpoint(max-width 500px 6);
+
+.sixth {
+	@include outer-container;
+}
+
+#comment {
+	@include span-columns(4);
+
+	@include media($mobile) {
+  		@include span-columns(3);
+	}
+}
+
+#list {
+	@include span-columns(8);
+
+	@include media($mobile) {
+  		@include span-columns(3);
+	}
+}
+
+form.message-form {
+	background-color: red;
+}
