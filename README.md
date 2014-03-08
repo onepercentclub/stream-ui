@@ -19,9 +19,9 @@ To watch / create the css from sass run (in the app root):
 
 Install Meteor bits:
 
-node - http://nodejs.org/
-meteor - https://www.meteor.com/
-meteorite - http://oortcloud.github.io/meteorite/
+    node - http://nodejs.org/
+    meteor - https://www.meteor.com/
+    meteorite - http://oortcloud.github.io/meteorite/
 
 Then run:
 
