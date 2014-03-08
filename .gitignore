@@ -1,2 +1,5 @@
 .DS_Store
 client/.sass-cache
+
+client/sass/bourbon
+client/sass/neat
