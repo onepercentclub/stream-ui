@@ -1,14 +1,32 @@
 <head>
-  <title>stream-ui</title>
+  <title>1%Club Dashboard Feed</title>
 </head>
 
 <body>
-  {{> home}}
+	<div id="main">
+		{{> home}}	
+	</div>  
 </body>
 
 <template name="home">
-  <header>
-    <h1>{{greeting}}</h1>
-  </header>
-  {{> messages}}
+
+	<div class="left-detail">
+		<div class="l-wrapper">
+			<div class="current-campaign">
+				<header>
+					
+				</header>
+				<footer>
+					
+				</footer>
+			</div>
+		</div>
+	</div>
+
+	<div class="right-feed">
+		<div class="l-wrapper">
+			{{> messages}}
+		</div>
+	</div>
+
 </template>

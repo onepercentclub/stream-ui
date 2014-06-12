@@ -13,26 +13,40 @@ body {
   font-family: "helvetica Neue", "Helvetica", sans-serif;
   font-weight: 200; }
 
-header {
-  background-color: #298ec3;
-  padding: 0.5em 1em;
-  text-align: center; }
-  header h1 {
-    color: #fff;
-    font-weight: normal;
-    line-height: 1.618em;
-    display: inline;
-    font-weight: 100; }
+#main {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; }
+
+.left-detail {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 70%;
+  height: 100%;
+  background-color: #ccc; }
+
+.right-feed {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 30%;
+  height: 100%;
+  background-color: #f4f4f4; }
+
+.l-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%; }
 
 .sixth {
-  *zoom: 1;
   max-width: 68em;
   margin-left: auto;
   margin-right: auto; }
-  .sixth:before, .sixth:after {
-    content: " ";
-    display: table; }
   .sixth:after {
+    content: "";
+    display: table;
     clear: both; }
 
 #load-more {
@@ -40,7 +54,7 @@ header {
   display: block;
   margin-right: 2.35765%;
   width: 100%;
-  padding: 10px; }
+  padding: 15px; }
   #load-more:last-child {
     margin-right: 0; }
   @media screen and (max-width: 700px) {
@@ -52,19 +66,24 @@ header {
       #load-more:last-child {
         margin-right: 0; } }
   #load-more .inner {
-    padding: 10px;
+    padding: 15px;
     color: white;
     background-color: #298ec3;
-    border-radius: 5px;
+    border-radius: 7.5px;
     text-align: center;
     border: 1px solid #999; }
+
+.date {
+  font-size: 0.8em;
+  color: gray;
+  margin-top: 7.5px; }
 
 #message {
   float: left;
   display: block;
   margin-right: 2.35765%;
   width: 31.76157%;
-  padding: 10px; }
+  padding: 15px; }
   #message:last-child {
     margin-right: 0; }
   @media screen and (max-width: 700px) {
@@ -80,8 +99,8 @@ header {
   float: left;
   display: block;
   margin-right: 2.35765%;
-  width: 65.88078%;
-  padding: 10px; }
+  width: 100%;
+  padding: 15px; }
   #list:last-child {
     margin-right: 0; }
   @media screen and (max-width: 700px) {
@@ -93,10 +112,11 @@ header {
       #list:last-child {
         margin-right: 0; } }
   #list .box {
+    position: static;
     float: left;
     display: block;
     margin-right: 2.35765%;
-    width: 48.82117%; }
+    width: 100%; }
     #list .box:last-child {
       margin-right: 0; }
     #list .box:nth-child(2n) {
@@ -116,12 +136,64 @@ header {
         #list .box:nth-child(1n+1) {
           clear: left; } }
     #list .box .inner {
-      padding: 10px;
-      margin-bottom: 5px;
-      border-radius: 5px;
-      border: 1px solid #999; }
+      position: relative;
+      margin-bottom: 7.5px;
+      border-radius: 15px;
+      border: 1px solid #999;
+      background: #ffffff;
+      padding: 15px;
+      max-width: 68em;
+      margin-left: auto;
+      margin-right: auto; }
+      #list .box .inner:after {
+        content: "";
+        display: table;
+        clear: both; }
+      #list .box .inner .profile {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 23.23176%; }
+        #list .box .inner .profile:last-child {
+          margin-right: 0; }
+        #list .box .inner .profile .photo {
+          display: block;
+          background: green;
+          height: 70px;
+          width: 70px;
+          border-radius: 50%;
+          border: solid 2px #999; }
+      #list .box .inner .content {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 40.29137%; }
+        #list .box .inner .content:last-child {
+          margin-right: 0; }
+      #list .box .inner .amount {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 30%;
+        border-radius: 0 15px 15px 0;
+        border: 1px solid pink;
+        background: pink; }
 
-.date {
-  font-size: 0.8em;
-  color: gray;
-  margin-top: 5px; }
+.current-campaign {
+  position: relative;
+  width: 100%;
+  height: 70%;
+  background-color: grey; }
+  .current-campaign header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 20%;
+    background: rgba(65, 65, 65, 0.6); }
+  .current-campaign footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 20%;
+    background: rgba(65, 65, 65, 0.6); }

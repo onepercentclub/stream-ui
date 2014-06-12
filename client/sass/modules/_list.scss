@@ -1,0 +1,59 @@
+#list {
+	@include span-columns(12);
+	@include pad($standard-padding);
+
+	@include media($mobile) {
+  		@include span-columns(12);
+	}
+
+	.box {
+		position: static;
+		@include span-columns(12);
+		@include omega(2n);
+
+		@include media($mobile) {
+  			@include span-columns(3);
+  			@include omega(1n);
+		}
+
+		.inner {
+			position: relative;
+			margin-bottom: $standard-padding/2;
+			border-radius: 15px;
+			border: 1px solid #999;	
+			background: #ffffff;
+			@include pad($standard-padding);
+			@include outer-container;
+
+			.profile {
+				@include span-columns(3);
+
+				.photo {
+					display: block;
+					background: green;
+					height: 70px;
+					width: 70px;
+					border-radius: 50%;
+					border: solid 2px #999;
+				}
+			}
+
+			.content {
+				@include span-columns(5);
+			}
+
+			.amount {
+				position: absolute;
+				top: 0;
+				right: 0;
+				height: 100%;
+				width: 30%;
+				border-radius: 0 15px 15px 0;
+				border: 1px solid pink;
+				background: pink;
+
+
+			}
+		}
+	}
+}

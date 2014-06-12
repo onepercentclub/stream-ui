@@ -1,100 +1,11 @@
-@import "bourbon/bourbon";
-@import "neat/neat";
+@import "libs/bourbon/bourbon";
+@import "libs/neat/neat";
 
-$primary-color: #298ec3;
-$mobile: new-breakpoint(max-width 700px 6);
-$standard-padding: 10px;
+@import "variables";
+@import "mixin/grid";
+@import "base/base.scss";
 
-body {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	outline: 0;
-	vertical-align: baseline;
-	background: transparent;
-	font-family: "helvetica Neue", "Helvetica", sans-serif;
-	font-weight: 200;
-}
-
-header {
-	background-color: $primary-color;
-	padding: 0.5em 1em;
-	text-align: center;
-
-	h1 {
-		color: #fff;
-		font-weight: normal;
-		line-height: 1.618em;
-		display: inline;
-		font-weight: 100;
-	}
-}
-
-.sixth {
-	@include outer-container;
-}
-
-#load-more {
-	@include span-columns(12);
-	@include pad($standard-padding);
-
-	@include media($mobile) {
-  		@include span-columns(6);
-	}
-
-	.inner {
-		@include pad($standard-padding);
-
-		color: white;
-		background-color: $primary-color;
-		border-radius: $standard-padding/2;
-		text-align: center;
-		border: 1px solid #999;
-	}
-}
-
-#message {
-	@include span-columns(4);
-	@include pad($standard-padding);
-
-	@include media($mobile) {
-  		@include span-columns(12);
-	}
-}
-
-#list {
-	@include span-columns(8);
-	@include pad($standard-padding);
-
-	@include media($mobile) {
-  		@include span-columns(12);
-	}
-
-	.box {
-		@include span-columns(6);
-		@include omega(2n);
-
-		@include media($mobile) {
-  			@include span-columns(3);
-  			@include omega(1n);
-		}
-
-		.inner {
-			@include pad($standard-padding);
-
-			margin-bottom: $standard-padding/2;
-			border-radius: $standard-padding/2;
-			border: 1px solid #999;			
-		}
-	}
-}
-
-.date {
-	font-size: 0.8em;
-	color: gray;
-	margin-top: $standard-padding/2;
-}
-
-form.message-form {
-	// background-color: red;
-}
+// Modules
+@import "modules/messages";
+@import "modules/list";
+@import "modules/campaign";

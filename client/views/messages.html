@@ -1,14 +1,5 @@
 <template name="messages">
 	<section class="sixth">
-		<div id="message">
-		  <form class="message-form">
-		    <div class="text">
-		      <div class="label">Message</div>
-		      <textarea cols="30" rows="5"></textarea>
-		    </div>
-		  </form>
-		  <a class="save" href="#">Save</a>
-		</div>
 		<div id="list">
 		  {{#if messages}}
 		    {{#each messages}}
@@ -18,10 +9,5 @@
 		    <p class="notice">No Messages!</p>
 		  {{/if}}
 		</div>
-    {{#unless hideLoadMore}}
-      <div id="load-more">
-        <div class="inner">Load More</div>
-      </div>
-    {{/unless}}
 	</section>
 </template>

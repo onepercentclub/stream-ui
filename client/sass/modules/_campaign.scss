@@ -1,0 +1,22 @@
+.current-campaign {
+	position: relative;
+	width: 100%;
+	height: 70%;
+	background-color: grey;
+
+	header {
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 20%;
+		background: rgba(65, 65, 65, .6);
+	}
+
+	footer {
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		height: 20%;
+		background: rgba(65, 65, 65, .6);
+	}
+}

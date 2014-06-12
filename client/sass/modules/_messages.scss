@@ -1,0 +1,8 @@
+#message {
+	@include span-columns(4);
+	@include pad($standard-padding);
+
+	@include media($mobile) {
+  		@include span-columns(12);
+	}
+}

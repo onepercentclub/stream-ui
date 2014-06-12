@@ -1,3 +1,3 @@
 Template.home.greeting = function () {
-  return "Stream";
+  return "Supppppppppp";
 };
