@@ -1,4 +1,5 @@
 Template.messages.events({
+  debugger;
   'click #load-more': function (event, template) {
     Session.set('limit', Session.get('limit') + App.defaults.skip);
   },
