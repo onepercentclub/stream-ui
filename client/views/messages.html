@@ -1,20 +1,22 @@
 <template name="messages">
- <form class="message-form">
-		    <div class="text">
-		      <div class="label">Message</div>
-		      <textarea cols="30" rows="5"></textarea>
-		    </div>
-		  </form>
-		  <a class="save" href="#">Save</a>
-	<section class="sixth">
-		<div id="list">
-		  {{#if messages}}
-		    {{#each messages}}
-		      {{> message}}
-		    {{/each}}
-		  {{else}}
-		    <p class="notice">No Messages!</p>
-		  {{/if}}
-		</div>
-	</section>
+  <div class="message-form">
+    <form>
+      <div class="text">
+        <div class="label">Message</div>
+        <textarea cols="30" rows="5"></textarea>
+      </div>
+    </form>
+    <a class="save" href="#">Save</a>
+  </div>
+  <section class="sixth">
+    <div id="list">
+      {{#if messages}}
+        {{#each messages}}
+          {{> message}}
+        {{/each}}
+      {{else}}
+        <p class="notice">No Messages!</p>
+      {{/if}}
+    </div>
+  </section>
 </template>

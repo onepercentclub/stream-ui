@@ -3,30 +3,37 @@
 </head>
 
 <body>
-	<div id="main">
-		{{> home}}	
-	</div>  
+  <div id="main">
+    {{> home}}  
+  </div>  
 </body>
 
 <template name="home">
+  <div class="left-detail">
+    <div class="l-wrapper">
+      {{#if campaign}}
+        <div class="current-campaign" style="background-image: url('{{campaign.image}}')">
+          <header>
+            <h1>{{campaign.title}}</h1>
+            <div class="title">{{campaign.owner.full_name}}</div>
+          </header>
+          <footer>
+            <strong style="width: 32.953105196451205%; overflow: hidden;" class="slider-progress is-in-progress">
+              <em class="slider-percentage">0%</em>
+            </strong>
+            {{campaign.amount_asked}}
+            {{campaign.amount_donated}}
+            {{campaign.amount_needed}}
+            {{campaign.deadline}}
+          </footer>
+        </div>
+      {{/if}}
+    </div>
+  </div>
 
-	<div class="left-detail">
-		<div class="l-wrapper">
-			<div class="current-campaign">
-				<header>
-					
-				</header>
-				<footer>
-					
-				</footer>
-			</div>
-		</div>
-	</div>
-
-	<div class="right-feed">
-		<div class="l-wrapper">
-			{{> messages}}
-		</div>
-	</div>
-
+  <div class="right-feed">
+    <div class="l-wrapper">
+      {{> messages}}
+    </div>
+  </div>
 </template>

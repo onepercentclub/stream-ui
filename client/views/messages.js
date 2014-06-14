@@ -4,7 +4,7 @@ Template.messages.events({
   },
 
   'click .save': function (event, template) {
-    var text = $(template.find(".text textarea"))
+    var text = $(template.find(".text textarea"));
 
     var message = {
     	text: text.val(),
@@ -13,7 +13,7 @@ Template.messages.events({
 
     Meteor.call("messageInsert", message, function(error, messageId){
     	if (error) {
-    		console.log("Error:", error);
+    		console.log("Error: ", error);
     	} else {
     		text.val("");
     	}
@@ -23,7 +23,7 @@ Template.messages.events({
 
 Template.messages.helpers({
   messages: function () {
-    return Messages.find({}, {sort: {created: -1}});
+    return Messages.find({}, {sort: {created: -1}}).fetch().slice(0, Session.get('limit'));
   },
   hideLoadMore: function () {
     var status = Session.get("hideLoadMore");

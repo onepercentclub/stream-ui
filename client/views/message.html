@@ -1,18 +1,18 @@
 <template name="message">
-  <div class="box">
-    <div class="inner">
-    	<span class="profile">
-    		<span class="photo">
-    			<img src="{{images}}">
-    		</span>
-    	</span>
-    	<span class="content">
-    		{{text}}<br />
-      <div class="date">{{formattedDate}}</div>
-    	</span>
-    	<span class="amount">
-    		
-    	</span>
+  {{#unless hideMessage}}
+    <div class="box">
+      <div class="inner">
+        <span class="profile">
+          <span class="photo">
+            <img src="{{image}}">
+          </span>
+        </span>
+        <span class="content">
+          {{text}}<br />
+          <div class="date">{{formattedDate}}</div>
+        </span>
+        <span class="amount">{{amount}}</span>
+      </div>
     </div>
-  </div>
+  {{/unless}}
 </template>

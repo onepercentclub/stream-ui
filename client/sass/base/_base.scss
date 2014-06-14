@@ -68,6 +68,7 @@ body {
 	margin-top: $standard-padding/2;
 }
 
-form.message-form {
+.message-form {
+  display: none;
 	// background-color: red;
 }
