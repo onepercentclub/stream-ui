@@ -1,42 +1,104 @@
 body {
-    height: 100%;
+    overflow: hidden;
 }
 
+.col-md-8 {
+    height: 1080px;
+    position: relative;
+}
+
+header, footer {
+    background-color: rgba(0,0,0, 0.8);
+    padding: 20px;
+}
+
+header h1 {
+    color: white;
+    margin: 0px;
+    font-weight: bold;
+
+}
+
+header img.icon {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 4px solid #fff;
+    background-color: #bbb;
+    margin: auto;
+}
+
+header .over-title {
+    color: #fff;
+}
+
+header .sub-title {
+    color: limegreen;
+}
+
+footer {
+    color: white;
+    font-weight: bold;
+    bottom: 0px;
+    position: absolute;
+    width: 100%;
+    margin: 0px;
+    
+
+}
+
+.current-campaign {
+    height: 100%;
+   -webkit-background-size: cover;
+}
+
+
 .item-list {
-    overflow: scroll;
 }
 
 .list-item {
     width: 100%;
-    border: 1px solid #999;
-    border-radius: 12px;
     background-color: white;
     margin-top: 10px;
+    border-radius: 16px;
+    border: 4px solid white;
 }
 
-.list-item:hover {
-    border: 1px solid #000;
+.list-item:hover,
+.list-item.hover {
+    border: 4px solid #000;
     background-color: #ddd;
+    box-shadow: 3px 3px 3px 0.5;
 }
 
 .list-item.selected {
     background-color: #f2dede;
 }
 
+.list-item > * {
+    height: 90px;
+}
+
 .list-item .icon {
+    border: 1px solid #999;
+    border-radius: 12px 0px 0px 12px;
+    border-right-width: 0px;
 }
 
 .list-item .icon img {
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
-    border: 1px solid #999;
-    background-color: #555;
-    margin: 8px;
+    border: 2px solid #bbb;
+    background-color: #bbb;
+    margin-top: 14px;
+
 }
 
 .list-item .title {
     padding: 8px;
+    border: 1px solid #999;
+    border-width: 1px 0px;
 }
 
 .list-item .title h3 {
@@ -56,12 +118,18 @@ body {
     font-style: normal;
 }
 
+.list-item .title strong {
+    color: #444;
+    font-style: normal;
+    font-weight: normal;
+}
+
 
 .list-item .label {
     border-radius: 0px 12px 12px 0px;
     background-color: #ff6191;
     color: white;
-    font-size: 3rem;
-    padding: 16px;
+    font-size: 4rem;
+    padding: 24px 16px;
     text-align: right;
 }

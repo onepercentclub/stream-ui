@@ -1,5 +1,5 @@
 Template.home.greeting = function () {
-  return "Supppppppppp";
+  return "Hello, World.";
 };
 
 Template.home.campaign = function () {
