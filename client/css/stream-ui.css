@@ -78,9 +78,6 @@ body {
   color: gray;
   margin-top: 7.5px; }
 
-.message-form {
-  display: none; }
-
 #message {
   float: left;
   display: block;
