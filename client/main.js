@@ -11,7 +11,7 @@ Meteor.startup(function () {
   Session.setDefault('projectSlugs', []);
 
   Deps.autorun(function (computation) {
-    Meteor.subscribe('messages', Session.get('limit'), function (response) {
+    Meteor.subscribe('messages', {limit: Session.get('limit')}, function (response) {
       if (Session.get('limit') > Messages.find().count())
         Session.set('hideLoadMore', true);
       else
@@ -21,7 +21,8 @@ Meteor.startup(function () {
 
   Deps.autorun(function (computation) {
     Session.set('campaignSlugs', Messages.find().map( function (message) {
-      return message.raw.project.id;
+      if (message.raw && message.raw.project)
+        return message.raw.project.id;
     }));
 
     Session.set('campaignSlug', Session.get('campaignSlugs')[0]);
@@ -29,7 +30,7 @@ Meteor.startup(function () {
 
   Deps.autorun(function (computation) {
     var message = Messages.findOne({'raw.project.id': Session.get('campaignSlug')});
-    if (message)
+    if (message && message.raw && message.raw.project)
       Session.set('campaign', message.raw.project);
   });
 
