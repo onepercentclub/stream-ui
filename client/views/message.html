@@ -1,18 +1,13 @@
 <template name="message">
-  {{#unless hideMessage}}
-    <div class="box">
-      <div class="inner">
-        <span class="profile">
-          <span class="photo">
-            <img src="{{image}}">
-          </span>
-        </span>
-        <span class="content">
-          {{text}}<br />
-          <div class="date">{{formattedDate}}</div>
-        </span>
-        <span class="amount">{{amount}}</span>
-      </div>
+    <div class="list-item row leap-interactive {{#if selectedMessage}}selected{{/if}}">
+        <div class="icon col-md-2">
+            <img src="{{image}}" />
+        </div>
+        <div class="title col-md-7">
+            <h3>{{text}}</h3>
+            <em>{{formattedDate}}</em>
+        </div>
+        <div class="label col-md-3">&euro; {{amount}}</div>
     </div>
-  {{/unless}}
 </template>
+

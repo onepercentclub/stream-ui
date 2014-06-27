@@ -1,22 +1,9 @@
 <template name="messages">
-  <div class="message-form">
-    <form>
-      <div class="text">
-        <div class="label">Message</div>
-        <textarea cols="30" rows="5"></textarea>
-      </div>
-    </form>
-    <a class="save" href="#">Save</a>
-  </div>
-  <section class="sixth">
-    <div id="list">
-      {{#if messages}}
+    {{#if messages}}
         {{#each messages}}
-          {{> message}}
+            {{> message}}
         {{/each}}
-      {{else}}
+    {{else}}
         <p class="notice">No Messages!</p>
-      {{/if}}
-    </div>
-  </section>
+    {{/if}}
 </template>

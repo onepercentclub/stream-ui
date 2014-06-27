@@ -5,7 +5,15 @@
     "commit": "2b87aa1f00a347778ce3f0938231b196e59e5afb"
   },
   "dependencies": {
-    "basePackages": {},
-    "packages": {}
+    "basePackages": {
+      "leapmotion": {}
+    },
+    "packages": {
+      "leapmotion": {
+        "git": "https://github.com/kevohagan/meteor-leapmotion.git",
+        "tag": "v0.0.9",
+        "commit": "f9eeb23051528bc26a98242b9787915056803da3"
+      }
+    }
   }
 }

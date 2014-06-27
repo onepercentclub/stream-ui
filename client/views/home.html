@@ -1,39 +1,38 @@
 <head>
-  <title>1%Club Dashboard Feed</title>
+    <title>1%Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/leapstrap.css" />
+    <link rel="stylesheet" href="css/dashboard.css" />
 </head>
-
 <body>
-  <div id="main">
-    {{> home}}  
-  </div>  
+    <div class="row leap-interactive">
+        {{> home}}
+    </div>
 </body>
 
 <template name="home">
-  <div class="left-detail">
-    <div class="l-wrapper">
-      {{#if campaign}}
-        <div class="current-campaign" style="background-image: url('{{campaign.image}}')">
-          <header>
-            <h1>{{campaign.title}}</h1>
-            <div class="title">{{campaign.owner.full_name}}</div>
-          </header>
-          <footer>
-            <strong style="width: 32.953105196451205%; overflow: hidden;" class="slider-progress is-in-progress">
-              <em class="slider-percentage">0%</em>
-            </strong>
-            {{campaign.amount_asked}}
-            {{campaign.amount_donated}}
-            {{campaign.amount_needed}}
-            {{campaign.deadline}}
-          </footer>
-        </div>
-      {{/if}}
+    <div class="col-md-8">
+        {{#if campaign}}
+            <div class="current-campaign" style="background-image: url('{{campaign.image}}')">
+                <header>
+                    <h1>{{campaign.title}}</h1>
+                    <div class="title">{{campaign.owner.full_name}}</div>
+                </header>
+                <footer>
+                    <strong style="width: 32.953105196451205%; overflow: hidden;" class="slider-progress is-in-progress">
+                        <em class="slider-percentage">0%</em>
+                    </strong>
+                    {{campaign.amount_asked}}
+                    {{campaign.amount_donated}}
+                    {{campaign.amount_needed}}
+                    {{campaign.deadline}}
+                </footer>
+            </div>
+        {{/if}}
     </div>
-  </div>
 
-  <div class="right-feed">
-    <div class="l-wrapper">
-      {{> messages}}
+    <div class="col-md-4 item-list catcher vertical leap-interactive" leap-disable-tap="true">
+        {{> messages}}
     </div>
-  </div>
+
 </template>

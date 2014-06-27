@@ -1,0 +1,67 @@
+body {
+    height: 100%;
+}
+
+.item-list {
+    overflow: scroll;
+}
+
+.list-item {
+    width: 100%;
+    border: 1px solid #999;
+    border-radius: 12px;
+    background-color: white;
+    margin-top: 10px;
+}
+
+.list-item:hover {
+    border: 1px solid #000;
+    background-color: #ddd;
+}
+
+.list-item.selected {
+    background-color: #f2dede;
+}
+
+.list-item .icon {
+}
+
+.list-item .icon img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #999;
+    background-color: #555;
+    margin: 8px;
+}
+
+.list-item .title {
+    padding: 8px;
+}
+
+.list-item .title h3 {
+    width: 100%;
+    color: limegreen;
+    font-weight: bold;
+    font-size: 2rem;
+    margin: 0px;
+    padding: 0px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.list-item .title em {
+    color: #999;
+    font-style: normal;
+}
+
+
+.list-item .label {
+    border-radius: 0px 12px 12px 0px;
+    background-color: #ff6191;
+    color: white;
+    font-size: 3rem;
+    padding: 16px;
+    text-align: right;
+}
