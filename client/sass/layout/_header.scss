@@ -3,6 +3,7 @@ header {
     padding: 20px;
 
 	h1 {
+		font-size: 41px;
 		color: white;
 		margin: 0px;
 		font-weight: bold;
@@ -22,9 +23,39 @@ header {
 
 	.over-title {
 		color: #fff;
+		font-size: 25px;
+
+		strong {
+			color: $color-primary;
+		}
 	}
 
 	.sub-title {
 		color: limegreen;
+		display: block;
+
+		.country-name {
+			display: inline-block; 
+			&:before {
+				position: relative;
+				content: '';
+				height: 21px;
+				width: 24px;
+				background: url("img/icons/icon-location.svg");
+				margin-right: 20px;
+			}
+		}
+
+		.country-region {
+			display: inline-block; 
+			&:before {
+				position: relative;
+				content: '';
+				height: 21px;
+				width: 24px;
+				background: url("img/icons/icon-tag.svg");
+				margin-right: 20px;
+			}
+		}
 	}
 }

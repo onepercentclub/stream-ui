@@ -23,7 +23,7 @@
                             <div class="over-title"><strong>{{campaign.owner.full_name}}</strong> is campaigning for</div>
                             <h1>{{campaign.title}}</h1>
                             <div class="sub-title">
-                                <strong>{{campaign.country.name}}</strong> {{campaign.country.subregion}}
+                                <span class="country-name">{{campaign.country.name}}</span> <span class="country-region">{{campaign.country.subregion}}</span>
                             </div>
                         </div>
                     </div>
@@ -31,24 +31,25 @@
                 </header>
                 <footer>
                     <div class="row">
-                        <strong style="width: 32.953105196451205%; overflow: hidden;" class="slider-progress is-in-progress">
-                            <em class="slider-percentage">0%</em>
-                        </strong>
-                        <div class="project-fund">
-                            <p class="project-fund-amount">
-                                <strong class="amount-donated">€ {{campaign.amount_donated}}</strong>
-                                of
-                                <strong class="amount-asked">€{{campaign.amount_asked}}</strong>
-                                raised
-                            </p>
-                            <div id="ember2016" class="ember-view">
-                                <div class="project-fund-amount-slider">
-                                    <strong style="width: {{campaign.percent_donated}}%; overflow: hidden;" class="slider-progress is-in-progress">
-                                    </strong>
+                        <div class="col-md-4">
+                            <div class="project-fund">
+                                <p class="project-fund-amount">
+                                    <strong class="amount-donated">€ {{campaign.amount_donated}}</strong>
+                                    of
+                                    <strong class="amount-asked">€{{campaign.amount_asked}}</strong>
+                                    raised
+                                </p>
+                                <div id="ember2016" class="ember-view">
+                                    <div class="project-fund-amount-slider">
+                                        <strong style="width: {{campaign.percent_donated}}%; overflow: hidden;" class="slider-progress is-in-progress">
+                                        </strong>
+                                    </div>
                                 </div>
                             </div>
+                            <strong style="width: 32.953105196451205%; overflow: hidden;" class="slider-progress is-in-progress">
+                            </strong>
                         </div>
-                        {{campaign.deadline}}
+                        <!-- {{campaign.deadline}} -->
                     </div>
                 </footer>
             </div>

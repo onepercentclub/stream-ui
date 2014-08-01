@@ -8,4 +8,32 @@ footer {
 	background-color: rgba(0,0,0, 0.8);
     padding: 20px;
 
+	.project-fund-amount-slider {
+	    border-radius: 1em;
+	    display: block;
+	    overflow: hidden;
+	    background-color: red;
+	    
+	    .slider-progress {
+	        position: relative;
+	        display: block;
+	        border-radius: 1em 0 0 1em;
+	        background-color: green;
+	        color: blue;
+	        text-align: right;
+	        white-space: nowrap;
+	        line-height: 1em;
+	        height: 1em;
+	        
+	        .slider {
+	            padding: 0 0.5em;
+	            font-style: normal;
+	        }
+
+	        .slider-percentage {
+	            visibility: hidden;
+	        }
+	    }
+	}
+
 }

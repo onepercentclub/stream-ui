@@ -25,6 +25,7 @@ header {
   background-color: rgba(0, 0, 0, 0.8);
   padding: 20px; }
   header h1 {
+    font-size: 41px;
     color: white;
     margin: 0px;
     font-weight: bold; }
@@ -36,9 +37,31 @@ header {
     background-color: #bbb;
     margin: auto; }
   header .over-title {
-    color: #fff; }
+    color: #fff;
+    font-size: 25px; }
+    header .over-title strong {
+      color: #FF619A; }
   header .sub-title {
-    color: limegreen; }
+    color: limegreen;
+    display: block; }
+    header .sub-title .country-name {
+      display: inline-block; }
+      header .sub-title .country-name:before {
+        position: relative;
+        content: '';
+        height: 21px;
+        width: 24px;
+        background: url("img/icons/icon-location.svg");
+        margin-right: 20px; }
+    header .sub-title .country-region {
+      display: inline-block; }
+      header .sub-title .country-region:before {
+        position: relative;
+        content: '';
+        height: 21px;
+        width: 24px;
+        background: url("img/icons/icon-tag.svg");
+        margin-right: 20px; }
 
 footer {
   color: white;
@@ -49,6 +72,26 @@ footer {
   margin: 0px;
   background-color: rgba(0, 0, 0, 0.8);
   padding: 20px; }
+  footer .project-fund-amount-slider {
+    border-radius: 1em;
+    display: block;
+    overflow: hidden;
+    background-color: red; }
+    footer .project-fund-amount-slider .slider-progress {
+      position: relative;
+      display: block;
+      border-radius: 1em 0 0 1em;
+      background-color: green;
+      color: blue;
+      text-align: right;
+      white-space: nowrap;
+      line-height: 1em;
+      height: 1em; }
+      footer .project-fund-amount-slider .slider-progress .slider {
+        padding: 0 0.5em;
+        font-style: normal; }
+      footer .project-fund-amount-slider .slider-progress .slider-percentage {
+        visibility: hidden; }
 
 .list-item {
   width: 100%;
@@ -67,7 +110,6 @@ footer {
     background-color: #ddd;
     box-shadow: 3px 3px 3px 0.5; }
   .list-item.selected {
-    background-color: #f2dede;
     margin-left: -100px; }
   .list-item .icon {
     border: 1px solid #999;
