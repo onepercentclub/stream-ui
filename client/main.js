@@ -10,23 +10,26 @@ Meteor.startup(function () {
     Session.set('limit', App.defaults.skip);
     Session.setDefault('projectSlugs', []);
 
-    LeapManager.init({
-        useHands: false,
-        maxCursors: 1,
-        enableHoverTap: true,
-        enablePressDown: true,
-        enableTouchScrolling: true,
-        enableScrollbarScrolling: false,
-        interactiveSelector: "a",
-        enableMetaGestures: false,
-        enableDefaultMetaGestureActions: false,
-        simulateWithMouse:false,
-        mouseCursorConfig: {
-            easing:.2
-        },
-        greedySelector: "body"
-    });
+    if (LEAP_ENABLED) {
 
+        LeapManager.init({
+            useHands: false,
+            maxCursors: 1,
+            enableHoverTap: true,
+            enablePressDown: true,
+            enableTouchScrolling: true,
+            enableScrollbarScrolling: false,
+            interactiveSelector: "a",
+            enableMetaGestures: false,
+            enableDefaultMetaGestureActions: false,
+            simulateWithMouse:false,
+            mouseCursorConfig: {
+                easing:.2
+            },
+            greedySelector: "body"
+        });
+
+    }
 
     Deps.autorun(function (computation) {
         Meteor.subscribe('messages', {limit: Session.get('limit')}, function (response) {
