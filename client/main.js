@@ -1,7 +1,8 @@
 App = {
     defaults: {
-        skip: 20
-    }
+        skip: 20,
+        LEAP_ENABLE: false
+    },
 }
 
 interval = null;
@@ -10,7 +11,7 @@ Meteor.startup(function () {
     Session.set('limit', App.defaults.skip);
     Session.setDefault('projectSlugs', []);
 
-    if (LEAP_ENABLED) {
+    if (App.defaults.LEAP_ENABLED) {
 
         LeapManager.init({
             useHands: false,
@@ -28,7 +29,6 @@ Meteor.startup(function () {
             },
             greedySelector: "body"
         });
-
     }
 
     Deps.autorun(function (computation) {
