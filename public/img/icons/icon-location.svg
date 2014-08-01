@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="21px" height="24px" viewBox="0 0 21 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.0.4 (8053) - http://www.bohemiancoding.com/sketch -->
+    <title>Imported Layers</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Artboard-1" sketch:type="MSArtboardGroup" transform="translate(-183.000000, -112.000000)" fill="#00C051">
+            <g id="Donations" sketch:type="MSLayerGroup" transform="translate(-2.000000, 0.000000)">
+                <g id="Project" sketch:type="MSShapeGroup">
+                    <g id="Top" transform="translate(2.000000, 0.000000)">
+                        <g id="Title" transform="translate(50.000000, 26.000000)">
+                            <g id="Meta" transform="translate(128.000000, 79.000000)">
+                                <g id="Location" transform="translate(5.168317, 7.896552)">
+                                    <g id="Imported-Layers">
+                                        <path d="M9.72607261,0 C4.37951155,0 0,4.34896552 0,9.65517241 C0,15.6248276 7.01666667,20.4096552 9.1300033,21.7158621 C9.45652145,21.9172414 9.99562376,21.9144828 10.3207525,21.7103448 C12.4313102,20.3862069 19.4521452,15.542069 19.4521452,9.65517241 C19.4521452,4.34896552 15.0726337,0 9.72607261,0 L9.72607261,0 Z M9.72607261,19.3103448 C7.01805611,17.4786207 2.77887789,13.5117241 2.77887789,9.65517241 C2.77887789,5.74344828 5.89538944,2.75862069 9.72607261,2.75862069 C13.5567558,2.75862069 16.6732673,5.74344828 16.6732673,9.65517241 C16.6732673,13.4593103 12.3423861,17.4482759 9.72607261,19.3103448 L9.72607261,19.3103448 Z" id="Fill-1"></path>
+                                        <path d="M9.72607261,6.89655172 C8.19074257,6.89655172 6.94719472,8.13241379 6.94719472,9.65517241 C6.94719472,11.177931 8.19074257,12.4137931 9.72607261,12.4137931 C11.2600132,12.4137931 12.5049505,11.177931 12.5049505,9.65517241 C12.5049505,8.13241379 11.2600132,6.89655172 9.72607261,6.89655172" id="Fill-2"></path>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -75,6 +75,6 @@ Meteor.startup(function () {
         }
 
         // Set timer for 10 seconds
-        interval = Meteor.setInterval(timeLeft, 3*1000);
+        interval = Meteor.setInterval(timeLeft, 6*1000);
     });
 });
