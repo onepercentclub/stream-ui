@@ -1,69 +1,78 @@
-#list {
-	@include span-columns(12);
-	@include pad($standard-padding);
+.list-item {
+	width: 100%;
+    background-color: white;
+    margin-top: 10px;
+    border-radius: 16px;
+    border: 4px solid #f3f3f3;
+    margin-left: 0;
+    @include transition (all .3s ease-in-out);
 
-	@include media($mobile) {
-  		@include span-columns(12);
-	}
+    > * {
+    	height: 90px;
+    }
 
-	.box {
-		position: static;
-		@include span-columns(12);
-		@include omega(2n);
+    &:hover, &.hover {
+		border: 4px solid #000;
+		background-color: #ddd;
+		box-shadow: 3px 3px 3px 0.5;
+    }
 
-		@include media($mobile) {
-  			@include span-columns(3);
-  			@include omega(1n);
+    &.selected {
+    	background-color: #f2dede;
+    	margin-left: -100px;
+    }
+
+    .icon {
+		border: 1px solid #999;
+		border-radius: 12px 0px 0px 12px;
+		border-right-width: 0px;
+
+		img {
+			width: 60px;
+			height: 60px;
+			border-radius: 50%;
+			border: 2px solid #bbb;
+			background-color: #bbb;
+			margin-top: 14px;
+		}
+    }
+
+    .title {
+		padding: 8px;
+		border: 1px solid #999;
+		border-width: 1px 0px;
+
+		h3 {
+			width: 100%;
+			color: limegreen;
+			font-weight: bold;
+			font-size: 2rem;
+			margin: 0px;
+			padding: 0px;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+			overflow: hidden;
 		}
 
-		.inner {
-			position: relative;
-			margin-bottom: $standard-padding/2;
-			border-radius: 15px;
-			border: 1px solid #999;	
-			background: #ffffff;
-			@include pad($standard-padding);
-			@include outer-container;
-
-			.profile {
-				@include span-columns(3);
-
-				.photo {
-					display: block;
-					background: green;
-					height: 70px;
-					width: 70px;
-					border-radius: 50%;
-					border: solid 2px #999;
-					overflow: hidden;
-          position: relative;
-
-          img {
-            position: absolute;
-            height: 100%;
-            width: 100%;
-            top: 0%;
-            left: 0%;
-          }
-				}
-			}
-
-			.content {
-				@include span-columns(5);
-			}
-
-			.amount {
-				position: absolute;
-				top: 0;
-				right: 0;
-				height: 100%;
-				width: 30%;
-				border-radius: 0 15px 15px 0;
-				border: 1px solid pink;
-				background: pink;
-
-
-			}
+		em {
+			color: #999;
+			font-style: normal;
 		}
-	}
+
+		strong {
+			color: #444;
+			font-style: normal;
+			font-weight: normal;
+		}
+    }
+
+    .label {
+		border-radius: 0px 12px 12px 0px;
+		background-color: #ff6191;
+		color: white;
+		font-size: 4rem;
+		padding: 24px 16px;
+		text-align: right;
+    }
 }
+

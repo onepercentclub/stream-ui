@@ -1,4 +1,13 @@
 <template name="messages">
+<div id="message" style="display:none">
+	<form class="message-form">
+		<div class="text">
+			<input type="text" id="message" placeholder="message">
+			<input type="number" id="amount" placeholder="amount">
+		</div>
+	</form>
+<a class="save" href="#">Save</a>
+ </div>
     {{#if messages}}
         {{#each messages}}
             {{> message}}
