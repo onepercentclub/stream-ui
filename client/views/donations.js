@@ -1,4 +1,4 @@
-Template.messages.events({
+Template.donations.events({
 
   'click #load-more': function (event, template) {
     Session.set('limit', Session.get('limit') + App.defaults.skip);
@@ -22,9 +22,9 @@ Template.messages.events({
   }
 });
 
-Template.messages.helpers({
-  messages: function () {
-    return Messages.find({}, {sort: {created: -1}}).fetch().slice(0, Session.get('limit'));
+Template.donations.helpers({
+  donations: function () {
+    return Messages.find({type: 'donations'}, {sort: {created: -1}}).fetch().slice(0, Session.get('limit'));
   },
   hideLoadMore: function () {
     var status = Session.get("hideLoadMore");

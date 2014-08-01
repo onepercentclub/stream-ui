@@ -1,4 +1,4 @@
-Template.message.helpers({
+Template.donation.helpers({
     formattedDate: function () {
         return moment(this.created).fromNow();
     },
@@ -24,7 +24,7 @@ Template.message.helpers({
     }
 });
 
-Template.message.image = function() {
+Template.donation.image = function() {
     if (!this.raw || !this.raw.user)
         return ''
 
@@ -39,7 +39,7 @@ Template.message.image = function() {
         return '';
     }
 }
-Template.message.events({
+Template.donation.events({
     'click': function (event, template) {
         Session.set('campaign', this.raw.project);
     }

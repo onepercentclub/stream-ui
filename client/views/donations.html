@@ -1,4 +1,4 @@
-<template name="messages">
+<template name="donations">
 <div id="message" style="display:none">
 	<form class="message-form">
 		<div class="text">
@@ -8,9 +8,9 @@
 	</form>
 <a class="save" href="#">Save</a>
  </div>
-    {{#if messages}}
-        {{#each messages}}
-            {{> message}}
+    {{#if donations}}
+        {{#each donations}}
+            {{> donation}}
         {{/each}}
     {{else}}
         <p class="notice">No Messages!</p>
