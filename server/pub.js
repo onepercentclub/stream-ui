@@ -3,5 +3,8 @@ Meteor.publish("messages", function (options) {
   check(options, Object);
   check(options.limit, Number);
 
-  return Messages.find({}, {limit: options.limit, sort: {created: -1}});
+  var filter = {};
+  if (typeof options.messageType == 'string') filter.type = options.messageType;
+
+  return Messages.find(filter, {limit: options.limit, sort: {created: -1}});
 });

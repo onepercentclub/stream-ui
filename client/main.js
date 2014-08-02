@@ -1,9 +1,9 @@
 App = {
     defaults: {
         skip: 20,
-        LEAP_ENABLE: false
+        leapEnabled: false
     },
-}
+};
 
 interval = null;
 
@@ -11,8 +11,7 @@ Meteor.startup(function () {
     Session.set('limit', App.defaults.skip);
     Session.setDefault('projectSlugs', []);
 
-    if (App.defaults.LEAP_ENABLED) {
-
+    if (App.defaults.leapEnabled) {
         LeapManager.init({
             useHands: false,
             maxCursors: 1,
@@ -25,14 +24,19 @@ Meteor.startup(function () {
             enableDefaultMetaGestureActions: false,
             simulateWithMouse:false,
             mouseCursorConfig: {
-                easing:.2
+                easing: 0.2
             },
             greedySelector: "body"
         });
     }
 
     Deps.autorun(function (computation) {
-        Meteor.subscribe('messages', {limit: Session.get('limit')}, function (response) {
+        var messageType = Session.get('messageType'),
+            options = {limit: Session.get('limit')};
+
+        if (typeof messageType == 'string') options.messageType = messageType;
+
+        Meteor.subscribe('messages', options, function (response) {
             if (Session.get('limit') > Messages.find().count())
                 Session.set('hideLoadMore', true);
             else
@@ -72,7 +76,7 @@ Meteor.startup(function () {
             } else {
                 index = 0;
             }
-        }
+        };
 
         // Set timer for 10 seconds
         interval = Meteor.setInterval(timeLeft, 3*1000);
