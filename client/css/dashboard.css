@@ -12,7 +12,9 @@ body {
 
 .current-campaign {
   height: 100%;
-  -webkit-background-size: cover; }
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center; }
 
 .message-container {
   background: #f3f3f3; }
@@ -40,7 +42,7 @@ header {
     color: #fff;
     font-size: 25px; }
     header .over-title strong {
-      color: #FF619A; }
+      color: #ff619a; }
   header .sub-title {
     color: limegreen;
     display: block; }
@@ -150,5 +152,3 @@ footer {
     font-size: 4rem;
     padding: 24px 16px;
     text-align: right; }
-
-/*# sourceMappingURL=dashboard.css.map */
