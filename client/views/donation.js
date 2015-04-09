@@ -6,7 +6,7 @@ Template.donation.helpers({
         return this.raw && this.raw.project && this.raw.project.id == Session.get('campaign').id;
     },
     amount: function () {
-        return this.raw && Math.round(this.raw.amount);
+        return this.raw && this.raw.amount.match(/(\d+)\.*/)[1];;
     },
     donor: function () {
         if (this.raw && this.raw.user && this.raw.user.full_name) {
@@ -21,6 +21,9 @@ Template.donation.helpers({
     },
     ownerImage: function () {
         return this.raw.project.owner.avatar;
+    },
+    labelCls: function () {
+        return this.raw.project.image.match(/https:\/\/(.*?)\//)[1].replace('.', '-');
     }
 });
 

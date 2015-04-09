@@ -7,7 +7,6 @@
             <h3>{{text}}</h3>
             <strong>
                 {{#if donor}}
-
                     {{donor}}
                 {{else}}
                     <i>anonymous</i>
@@ -16,7 +15,7 @@
             </strong>
             <em>{{formattedDate}}</em>
         </div>
-        <div class="label col-md-3">&euro;{{amount}}</div>
+        <div class="label col-md-3 {{labelCls}}">&euro;{{amount}}</div>
     </div>
 </template>
 
