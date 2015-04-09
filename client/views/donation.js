@@ -23,7 +23,7 @@ Template.donation.helpers({
         return this.raw.project.owner.avatar;
     },
     labelCls: function () {
-        return this.raw.project.image.match(/https:\/\/(.*?)\//)[1].replace('.', '-');
+        return this.raw.project.image.match(/https:\/\/(.*?)\//)[1].replace(/\./g, '-');
     }
 });
 
