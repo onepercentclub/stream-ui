@@ -147,8 +147,13 @@ footer {
       font-weight: normal; }
   .list-item .label {
     border-radius: 0px 12px 12px 0px;
-    background-color: #ff6191;
     color: white;
     font-size: 4rem;
     padding: 24px 16px;
     text-align: right; }
+  .list-item .label.www-onepercentclub-com {
+    background-color: #ff6191; }
+  .list-item .label.crowdfunding-gent {
+    background-color: #812C7C; }
+  .list-item .label.hetluktons-nl {
+    background-color: #F07E06; }
