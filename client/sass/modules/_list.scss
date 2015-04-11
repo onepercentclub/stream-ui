@@ -53,15 +53,23 @@
             overflow: hidden;
         }
 
+        em, strong {
+            display: inline-block;
+            overflow: hidden;
+            white-space: nowrap;            
+        }
+
         em {
             color: #999;
             font-style: normal;
+            width: 110px;
         }
 
         strong {
             color: #444;
             font-style: normal;
             font-weight: normal;
+            width: 110px;
         }
     }
 
