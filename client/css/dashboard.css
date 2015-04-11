@@ -115,7 +115,7 @@ footer {
     margin-left: -100px; }
   .list-item .icon {
     border: 1px solid #999;
-    border-radius: 6px 0px 0px 6px;
+    border-radius: 12px 0px 0px 12px;
     border-right-width: 0px; }
     .list-item .icon img {
       width: 50px;
