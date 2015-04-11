@@ -118,12 +118,12 @@ footer {
     border-radius: 6px 0px 0px 6px;
     border-right-width: 0px; }
     .list-item .icon img {
-      width: 40px;
-      height: 40px;
+      width: 50px;
+      height: 50px;
       border-radius: 50%;
       border: 2px solid #bbb;
       background-color: #bbb;
-      margin-top: 14px; }
+      margin-top: 10px; }
   .list-item .title {
     padding: 8px;
     border: 1px solid #999;
