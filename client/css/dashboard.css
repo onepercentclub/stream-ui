@@ -98,7 +98,7 @@ footer {
 .list-item {
   width: 100%;
   background-color: white;
-  margin-top: 10px;
+  margin-top: 4px;
   border-radius: 16px;
   border: 4px solid #f3f3f3;
   margin-left: 0;
@@ -106,7 +106,7 @@ footer {
   -moz-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out; }
   .list-item > * {
-    height: 90px; }
+    height: 70px; }
   .list-item:hover, .list-item.hover {
     border: 4px solid #000;
     background-color: #ddd;
@@ -115,11 +115,11 @@ footer {
     margin-left: -100px; }
   .list-item .icon {
     border: 1px solid #999;
-    border-radius: 12px 0px 0px 12px;
+    border-radius: 6px 0px 0px 6px;
     border-right-width: 0px; }
     .list-item .icon img {
-      width: 60px;
-      height: 60px;
+      width: 40px;
+      height: 40px;
       border-radius: 50%;
       border: 2px solid #bbb;
       background-color: #bbb;
