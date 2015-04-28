@@ -23,6 +23,18 @@ body {
     margin: -10px 0 0 -30px;
     padding: 10px 0 0 30px; }
 
+.www-onepercentclub-com {
+  background-color: #ff6191; }
+
+.crowdfunding-gent {
+  background-color: #812C7C; }
+
+.hetluktons-nl {
+  background-color: #F07E06; }
+
+.cares-booking-com {
+  background-color: #003580; }
+
 header {
   background-color: rgba(0, 0, 0, 0.8);
   padding: 20px; }
@@ -163,11 +175,3 @@ footer {
     padding: 0px;
     padding-top: 15px;
     text-align: center; }
-  .list-item .www-onepercentclub-com {
-    background-color: #ff6191; }
-  .list-item .crowdfunding-gent {
-    background-color: #812C7C; }
-  .list-item .hetluktons-nl {
-    background-color: #F07E06; }
-  .list-item .cares-booking-com {
-    background-color: #003580; }
