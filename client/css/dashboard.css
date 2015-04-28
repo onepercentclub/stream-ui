@@ -84,12 +84,11 @@ footer {
     border-radius: 1em;
     display: block;
     overflow: hidden;
-    background-color: rgba(255, 0, 0, 0.5); }
+    background-color: rgba(216, 216, 216, 0.15); }
     footer .project-fund-amount-slider .slider-progress {
       position: relative;
       display: block;
       border-radius: 1em 0 0 1em;
-      background-color: green;
       color: blue;
       text-align: right;
       white-space: nowrap;
@@ -164,11 +163,11 @@ footer {
     padding: 0px;
     padding-top: 15px;
     text-align: center; }
-  .list-item .label.www-onepercentclub-com {
+  .list-item .www-onepercentclub-com {
     background-color: #ff6191; }
-  .list-item .label.crowdfunding-gent {
+  .list-item .crowdfunding-gent {
     background-color: #812C7C; }
-  .list-item .label.hetluktons-nl {
+  .list-item .hetluktons-nl {
     background-color: #F07E06; }
-  .list-item .label.cares-booking-com {
+  .list-item .cares-booking-com {
     background-color: #003580; }

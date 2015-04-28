@@ -14,5 +14,10 @@ Template.home.helpers({
       return Math.round(campaign.amount_donated / campaign.amount_asked * 100);
     else
       return null;
+  },
+  sliderCls: function () {
+    var campaign = Session.get('campaign');
+    
+    return campaign.image.match(/https:\/\/(.*?)\//)[1].replace(/\./g, '-');
   }
 });
