@@ -74,10 +74,11 @@ footer {
   margin: 0px;
   background-color: rgba(0, 0, 0, 0.8);
   padding: 20px; }
-  footer .project-fund-amount strong {
-    font-weight: 100;
-    font-size: 1.5em;
+  footer .project-fund-amount {
     word-spacing: 5px; }
+    footer .project-fund-amount strong {
+      font-weight: 100;
+      font-size: 1.5em; }
   footer .project-fund-amount-slider {
     border-radius: 1em;
     display: block;
