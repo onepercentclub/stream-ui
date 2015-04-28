@@ -6,10 +6,13 @@ Template.home.campaign = function () {
   return Session.get('campaign');
 };
 
-Template.home.percentFunded = function () {
-  var message = Messages.findOne({'raw.project.id': Session.get('projectSlug')});
-  if (message)
-    return message.raw.project;
-  else
-    return null;
-};
+Template.home.helpers({
+  percentFunded: function () {
+    var campaign = Session.get('campaign');
+
+    if (campaign)
+      return Math.round(campaign.amount_donated / campaign.amount_asked * 100);
+    else
+      return null;
+  }
+});
