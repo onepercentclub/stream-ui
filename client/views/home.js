@@ -19,5 +19,40 @@ Template.home.helpers({
     var campaign = Session.get('campaign');
     
     return campaign.image.match(/https:\/\/(.*?)\//)[1].replace(/\./g, '-');
+  },
+  tenantLogo: function () {
+    var campaign = Session.get('campaign'),
+        url = campaign.image.match(/https:\/\/(.*?)\//)[1].replace(/\./g, '.'),
+        tenantName,
+        newUrl;
+
+    switch(true) {
+      case /onepercent/.test(url):
+        tenantName = 'onepercent';
+        break;
+      case /utrecht/.test(url):
+        tenantName = 'utrecht';
+        break;
+      case /goes/.test(url):
+        tenantName = 'goes';
+        break;
+      case /breda/.test(url):
+        tenantName = 'breda';
+        break;
+      case /tilburg/.test(url):
+        tenantName = 'tilburg';
+        break;
+      case /almelo/.test(url):
+        tenantName = 'almelo';
+        break;
+      case /gent/.test(url):
+        tenantName = 'gent';
+        break;
+      case /westfriesland/.test(url):
+        tenantName = 'west-friesland';
+        break;
+    }
+    newUrl = 'https://' + url + '/static/assets/frontend/'+ tenantName +'/images/logo.svg'
+    return newUrl;
   }
 });

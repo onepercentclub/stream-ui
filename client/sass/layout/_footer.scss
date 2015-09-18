@@ -5,8 +5,16 @@ footer {
 	position: fixed;
 	width: 100%;
 	margin: 0px;
-	background-color: rgba(0,0,0, 0.8);
+	background-color: rgba(0,0,0, .8);
     padding: 20px;
+
+    .tenant-logo-bg {
+		background-color: rgba(255,255,255, .2);
+		max-width: 95%;
+		padding: 10px;
+		border-radius: 10px;
+		text-align: center;
+    }
 
     .project-fund-amount {
   		word-spacing: 5px;
@@ -22,7 +30,7 @@ footer {
 	    border-radius: 1em;
 	    display: block;
 	    overflow: hidden;
-	    background-color: rgba(216, 216, 216, 0.15);
+	    background-color: rgba(216, 216, 216, .15);
 	    
 	    .slider-progress {
 	        position: relative;
@@ -32,7 +40,7 @@ footer {
 	        text-align: right;
 	        white-space: nowrap;
 	        line-height: 1em;
-	        height: 1.5em;
+	        height: 1em;
 	        
 	        .slider {
 	            padding: 0 0.5em;
