@@ -1,8 +1,7 @@
-html {
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box; }
-
-*, *::after, *::before {
-  box-sizing: inherit; }
 
 body {
   overflow: hidden; }
@@ -24,7 +23,8 @@ body {
     margin: -10px 0 0 -30px;
     padding: 10px 0 0 30px; }
 
-.www-onepercentclub-com {
+.www-onepercentclub-com,
+.onepercentclub-com {
   background-color: #ff6191; }
 
 .crowdfunding-gent {
@@ -58,7 +58,7 @@ header {
     color: #fff;
     font-size: 25px; }
     header .over-title strong {
-      color: #FF619A; }
+      color: #ff619a; }
   header .sub-title {
     color: limegreen;
     display: block; }
@@ -185,5 +185,3 @@ footer {
     padding: 0px;
     padding-top: 15px;
     text-align: center; }
-
-/*# sourceMappingURL=dashboard.css.map */
